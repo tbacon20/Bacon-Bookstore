@@ -1,4 +1,5 @@
 ﻿using BaconBookstore.Models;
+using BaconBookstore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -16,12 +17,30 @@ namespace BaconBookstore.Controllers
         private IBookstoreRepository repo;
         public HomeController(IBookstoreRepository bookstoreRepository) => repo = bookstoreRepository;
 
-        public IActionResult Index()
+        public IActionResult Index(int pageNum = 1)
         {
-            // Getting books for context
-            var context = repo.Books.ToList();
+            // page CANNOT be used as a variable name (it's a reserved word)
+            int pageSize = 10;
 
-            return View(context);
+            var bookViewModelContext = new BooksViewModel
+            {
+                Books = repo.Books
+                .OrderBy(b => b.Title)
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize),
+
+                PageInfo = new PageInfo
+                {
+                    TotalNumBooks = repo.Books.Count(),
+                    BooksPerPage = pageSize,
+                    CurrentPage = pageNum
+                }
+            };
+
+
+            // Getting books for context and skipping to the current pag
+
+            return View(bookViewModelContext);
         }
 
         

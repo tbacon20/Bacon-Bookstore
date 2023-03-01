@@ -13,14 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
 using BaconBookstore.Models;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
+using BaconBookstore.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3007dec881a1c14b32555b0b2e61bf5e0c966b2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c8f4228550a64dbdebb48c072ff2564afe640d36", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

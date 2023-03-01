@@ -1,36 +1,27 @@
 ﻿@{
 }
 
-@model List<Book>
+@* 
+This would return only the context from the controller
+@model IQueryable<Book> 
+*@
+
+@model BooksViewModel
+
 
 <h1>The Bacon Bookstore</h1>
 
+@foreach (Book x in Model.Books)
+{
+    <h3>@x.Title</h3>
+    <ul>
+        <li>Author: @x.Author</li>
+        <li>Publisher: @x.Publisher</li>
+        <li>ISBN: @x.Isbn</li>
+        <li>Category: @x.Category @x.Classification</li>
+        <li>Page Count: @x.PageCount</li>
+        <li>Price: @x.Price</li>
+    </ul>
+}
 
-
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td>Title</td>
-            <td>Author</td>
-            <td>Publisher</td>
-            <td>ISBN</td>
-            <td>Category / Classification</td>
-            <td>Num Pages</td>
-            <td>Price</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (Book x in Model)
-        {
-        <tr>
-            <td>@x.Title</td>
-            <td>@x.Author</td>
-            <td>@x.Publisher</td>
-            <td>@x.Isbn</td>
-            <td>@x.Category @x.Classification</td>
-            <td>@x.PageCount</td>
-            <td>@x.Price</td>
-        </tr>
-        }
-    </tbody>
-</table>
+<div page-turner="@Model.PageInfo" page-action="Index"></div>

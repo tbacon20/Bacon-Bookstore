@@ -13,14 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
+#line 5 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
 using BaconBookstore.Models;
 
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 8 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\_ViewImports.cshtml"
+using BaconBookstore.Models.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2c2a19db87f0ff84f8895220735e819f00ecb17", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3007dec881a1c14b32555b0b2e61bf5e0c966b2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c8f4228550a64dbdebb48c072ff2564afe640d36", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -51,7 +58,7 @@ using BaconBookstore.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2c2a19db87f0ff84f8895220735e819f00ecb173207", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2c2a19db87f0ff84f8895220735e819f00ecb173447", async() => {
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\Shared\_Layout.cshtml"
@@ -73,7 +80,7 @@ using BaconBookstore.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2c2a19db87f0ff84f8895220735e819f00ecb174526", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b2c2a19db87f0ff84f8895220735e819f00ecb174766", async() => {
                 WriteLiteral("\r\n    <div>\r\n        ");
 #nullable restore
 #line 10 "C:\Users\Tanner\ISCore\WINTER 2023\IS413 Enterprise App\Missions\BaconLibrary\BaconBookstore\Views\Shared\_Layout.cshtml"
