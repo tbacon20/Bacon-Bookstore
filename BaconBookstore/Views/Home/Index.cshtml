@@ -1,9 +1,10 @@
 ﻿@{
+    ViewData["Title"] = "Bacon Bookstore";
 }
 
-@* 
-This would return only the context from the controller
-@model IQueryable<Book> 
+@*
+    This would return only the context from the controller
+    @model IQueryable<Book>
 *@
 
 @model BooksViewModel
@@ -13,15 +14,24 @@ This would return only the context from the controller
 
 @foreach (Book x in Model.Books)
 {
-    <h3>@x.Title</h3>
-    <ul>
-        <li>Author: @x.Author</li>
-        <li>Publisher: @x.Publisher</li>
-        <li>ISBN: @x.Isbn</li>
-        <li>Category: @x.Category @x.Classification</li>
-        <li>Page Count: @x.PageCount</li>
-        <li>Price: @x.Price</li>
-    </ul>
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @x.Title
+            <span class="badge badge-pill badge-primary bg-dark" style="float:right">
+                <small>$@x.Price</small>
+            </span>
+        </h4>
+    </div>
+    <div class="card-text p-1">@x.Category @x.Classification</div>
+    <div class="card-text p-1">Author: @x.Author</div>
+    <div class="card-text p-1">Publisher: @x.Publisher</div>
+    <div class="card-text p-1">ISBN: @x.Isbn</div>
+    <div class="card-text p-1">Category:</div>
+    <div class="card-text p-1">Page Count: @x.PageCount</div>
+</div>
 }
-
-<div page-turner="@Model.PageInfo" page-action="Index"></div>
+<div page-turner="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
