@@ -39,6 +39,12 @@ namespace BaconBookstore
             // ADDED Repository for the DB
             // This decouples so that every HTTP request gets it's own repository
             services.AddScoped<IBookstoreRepository, EFBookStoreRepository>();
+
+            // ADDED enable razor pages
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,14 +57,35 @@ namespace BaconBookstore
 
             // ADDED Use files in the wwwroot folder
             app.UseStaticFiles();
-
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
+                // ADDED Use pagination endpoints with category included (Must come before other endpoints)
+                endpoints.MapControllerRoute(
+                    name: "categorypage", //what we're calling the endpoint, not necessarily the name of anything elsewhere
+                    pattern: "{bookType}/Page{pageNum}", //this is the exact name of what is used in your controller
+                    defaults: new { Controller = "Home", Action = "Index" }
+                    );
+
+                // ADDED Use pagination endpoints (Must come before other endpoints)
+                // notice we don't need "name, pattern, and defaults")
+                endpoints.MapControllerRoute(
+                    "Paging", //what we're calling the endpoint, not necessarily the name of anything elsewhere
+                    "Page{pageNum}", //this is the exact name of what is used in your controller
+                    new { Controller = "Home", Action = "Index", pageNum = 1 }
+                    );
+
+                endpoints.MapControllerRoute("category", "{bookType}", new { Controller = "Home", Action = "Index", pageNum = 1 });
+
+                
+
                 // ADDED Use controller for endpoints
                 endpoints.MapDefaultControllerRoute();
+
+                // ADDED 
+                endpoints.MapRazorPages();
             });
         }
     }
