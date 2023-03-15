@@ -39,6 +39,7 @@ namespace BaconBookstore
             // ADDED Repository for the DB
             // This decouples so that every HTTP request gets it's own repository
             services.AddScoped<IBookstoreRepository, EFBookStoreRepository>();
+            services.AddScoped<IPurchaseRepository, EFPurchaseRepository>();
 
             // ADDED enable razor pages
             services.AddRazorPages();
