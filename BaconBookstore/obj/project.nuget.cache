@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Hm3eK5m39eIwGMo7JiRnvb/YdxapUb3yOLffQiuQVOc/OdwUJduqwgVp4NimnXVhCi2x3asjZqyw2OCJn3B81A==",
+  "dgSpecHash": "IpYHjbmhyuoli3WdxQ3G5ZByYp0Od25ySLD1U/hKOnNhfaxHjfPgRD99mhBwv5HVwTxkAxTv1vmkulAWsbRFHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tanner\\ISCore\\WINTER 2023\\IS413 Enterprise App\\Missions\\BaconLibrary\\BaconBookstore\\BaconBookstore.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tanner\\.nuget\\packages\\font.awesome\\5.12.0\\font.awesome.5.12.0.nupkg.sha512",
     "C:\\Users\\Tanner\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Tanner\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Tanner\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
